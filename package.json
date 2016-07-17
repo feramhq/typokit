@@ -1,0 +1,30 @@
+{
+  "name": "typomap",
+  "version": "0.1.0",
+  "description": "Collection of typos and their fixes",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "prepublish": "npm test",
+    "precommit": "npm test"
+  },
+  "keywords": [
+    "typo",
+    "spelling mistake",
+    "spelling error"
+  ],
+  "author": "Adrian Sieber",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^2.13.1",
+    "fs-promise": "^0.5.0",
+    "javascript-styleguide": "^0.2.2"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": "./node_modules/javascript-styleguide/.eslintrc.yaml"
+  },
+  "devDependencies": {
+    "husky": "^0.11.5"
+  }
+}
