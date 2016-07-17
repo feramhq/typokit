@@ -5,7 +5,8 @@ const numberOfWords = 3219
 const numberOfTypos = 4526
 
 {
-  typoKit({type: 'words'})
+  typoKit
+    .wordsPromise
     .then(words => {
       assert(Array.isArray(words))
       assert.equal(words.length, numberOfWords)
@@ -18,7 +19,8 @@ const numberOfTypos = 4526
 }
 
 {
-  typoKit({type: 'typos'})
+  typoKit
+    .typosPromise
     .then(typos => {
       assert(Array.isArray(typos))
       assert.equal(typos.length, numberOfTypos)
@@ -31,7 +33,8 @@ const numberOfTypos = 4526
 }
 
 {
-  typoKit({type: 'typoToWord'})
+  typoKit
+    .typoToWordPromise
     .then(map => {
       const keys = Object.keys(map)
       assert.equal(keys.length, numberOfTypos)
@@ -41,7 +44,8 @@ const numberOfTypos = 4526
 }
 
 {
-  typoKit({type: 'wordToTypos'})
+  typoKit
+    .wordToTyposPromise
     .then(map => {
       const keys = Object.keys(map)
       assert.equal(keys.length, numberOfWords)

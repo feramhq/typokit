@@ -2,8 +2,6 @@ const path = require('path')
 const fsp = require('fs-promise')
 const yaml = require('js-yaml')
 const values = require('object.values')
-const nativeConsole = require('console')
-const log = new nativeConsole.Console(process.stdout, process.stderr)
 const typoMapsPath = path.join(__dirname, 'maps')
 
 function reverseMap (valueToKeysMap) {
@@ -25,9 +23,7 @@ function reverseMap (valueToKeysMap) {
   return keyToValueMap
 }
 
-module.exports = (options = {}) => {
-  const {type} = options
-
+function getTypoMapsPromise () {
   return fsp
     .readdir(typoMapsPath)
     .then(fileNames => fileNames
@@ -38,39 +34,42 @@ module.exports = (options = {}) => {
       filePaths.map(filePath => fsp.readFile(filePath))
     ))
     .then(fileContents => fileContents.map(yaml.safeLoad))
-    .then(typoMaps => {
+}
 
-      if (type === 'words') {
-        return typoMaps.reduce(
-          (words, typoMap) => words.concat(Object.keys(typoMap)),
-          []
-        )
-      }
-      else if (type === 'typos') {
-        return typoMaps.reduce(
-          (typos, typoMap) => typos.concat(...values(typoMap)),
-          []
-        )
-      }
-      else  if (type === 'wordToTypos') {
-        return typoMaps.reduce(
-          (map, typoMap) => Object.assign(map, typoMap),
-          {}
-        )
-      }
-      else if (type === 'typoToWord') {
-        return reverseMap(typoMaps.reduce(
-          (map, typoMap) => Object.assign(map, typoMap),
-          {}
-        ))
-      }
-      else {
-        throw new Error(`"${type}" is no valid type`)
-      }
-    })
-    // .then(typoToWordMap => {
-    //   fileTypeObject.map = typoToWordMap
-    //   return fileTypeObject
-    // })
-    .catch(error => log.error(error))
+module.exports = {
+  get wordsPromise () {
+    return getTypoMapsPromise().then(typoMaps =>
+      typoMaps.reduce(
+        (words, typoMap) => words.concat(Object.keys(typoMap)),
+        []
+      )
+    )
+  },
+
+  get typosPromise () {
+    return getTypoMapsPromise().then(typoMaps =>
+      typoMaps.reduce(
+        (typos, typoMap) => typos.concat(...values(typoMap)),
+        []
+      )
+    )
+  },
+
+  get typoToWordPromise () {
+    return getTypoMapsPromise().then(typoMaps =>
+      reverseMap(typoMaps.reduce(
+        (map, typoMap) => Object.assign(map, typoMap),
+        {}
+      ))
+    )
+  },
+
+  get wordToTyposPromise () {
+    return getTypoMapsPromise().then(typoMaps =>
+      typoMaps.reduce(
+        (map, typoMap) => Object.assign(map, typoMap),
+        {}
+      )
+    )
+  },
 }
