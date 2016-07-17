@@ -1,6 +1,7 @@
 const path = require('path')
 const fsp = require('fs-promise')
 const yaml = require('js-yaml')
+const values = require('object.values')
 const nativeConsole = require('console')
 const log = new nativeConsole.Console(process.stdout, process.stderr)
 const typoMapsPath = path.join(__dirname, 'maps')
@@ -25,7 +26,7 @@ function reverseMap (valueToKeysMap) {
 }
 
 module.exports = (options = {}) => {
-  const {type, sortBy} = options
+  const {type} = options
 
   return fsp
     .readdir(typoMapsPath)
@@ -39,7 +40,19 @@ module.exports = (options = {}) => {
     .then(fileContents => fileContents.map(yaml.safeLoad))
     .then(typoMaps => {
 
-      if (type === 'wordToTypos') {
+      if (type === 'words') {
+        return typoMaps.reduce(
+          (words, typoMap) => words.concat(Object.keys(typoMap)),
+          []
+        )
+      }
+      else if (type === 'typos') {
+        return typoMaps.reduce(
+          (typos, typoMap) => typos.concat(...values(typoMap)),
+          []
+        )
+      }
+      else  if (type === 'wordToTypos') {
         return typoMaps.reduce(
           (map, typoMap) => Object.assign(map, typoMap),
           {}
