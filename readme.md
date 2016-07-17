@@ -11,4 +11,4 @@ Collection of common typos and spelling mistakes and their fixes.
 
 [Common Typo Detector]: https://www.npmjs.com/package/common-typo-detector
 [TypoJS]: https://www.npmjs.com/package/typojs
-[Wikipedia](https://en.wikipedia.org/wiki/Wikipedia:Lists_of_common_misspellings)
+[Wikipedia]: https://en.wikipedia.org/wiki/Wikipedia:Lists_of_common_misspellings
