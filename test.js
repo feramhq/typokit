@@ -18,19 +18,19 @@ const typoMapPromise = require('.')
     .catch(console.error)
 }
 
-// {
-//   typoMapPromise({
-//     type: 'wordToTypo',
-//     sortBy: 'alphabetical',
-//   })
-//     .then(map => {
-//       console.log('Word to Typo:')
-//       const keysHead = Object
-//         .keys(map)
-//         .slice(0, 10)
-//       keysHead.forEach(key =>
-//         console.log(key, '\t=>\t', map[key])
-//       )
-//     })
-//     .catch(console.error)
-// }
+{
+  typoMapPromise({
+    type: 'wordToTypos',
+    sortBy: 'alphabetical',
+  })
+    .then(map => {
+      console.log('Word to Typo:')
+      const keysHead = Object
+        .keys(map)
+        .slice(0, 10)
+      keysHead.forEach(key =>
+        console.log(key, '\t=>\t', map[key])
+      )
+    })
+    .catch(console.error)
+}

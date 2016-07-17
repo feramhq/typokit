@@ -45,11 +45,15 @@ module.exports = (options = {}) => {
           {}
         )
       }
-
-      return reverseMap(typoMaps.reduce(
-        (map, typoMap) => Object.assign(map, typoMap),
-        {}
-      ))
+      else if (type === 'typoToWord') {
+        return reverseMap(typoMaps.reduce(
+          (map, typoMap) => Object.assign(map, typoMap),
+          {}
+        ))
+      }
+      else {
+        throw new Error(`"${type}" is no valid type`)
+      }
     })
     // .then(typoToWordMap => {
     //   fileTypeObject.map = typoToWordMap
