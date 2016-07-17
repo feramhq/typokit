@@ -3,6 +3,8 @@ back:
   - bcak
 background:
   - backgorund
+  - backgound
+  - backgroud
   - backgruond
 backgrounds: backrounds
 bananas: banannas
@@ -141,9 +143,6 @@ businessman: buisnessman
 block:
   - blokc
   - bolck
-  - backgound
-  - backgroud
-  - backgruond
 boolean:
   - bolean
   - boolaen

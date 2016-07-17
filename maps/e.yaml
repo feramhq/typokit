@@ -7,7 +7,6 @@ eclectic: ecclectic
 eclipse: eclispe
 economic: ecomonic
 economy: eceonomy
-eels: eles
 efficiency:
   - effeciency
   - efficency
@@ -45,6 +44,7 @@ else:
   - alse
   - eles
   - esle
+  - eels
 emanate: eminate
 emanated: eminated
 embargoes: embargos
