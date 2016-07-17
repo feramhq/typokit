@@ -1,7 +1,7 @@
 {
-  "name": "typomap",
+  "name": "typokit",
   "version": "0.1.0",
-  "description": "Collection of typos and their fixes",
+  "description": "Collection of typos & spelling mistakes and their fixes",
   "main": "index.js",
   "scripts": {
     "test": "node test.js",

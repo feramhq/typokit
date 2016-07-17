@@ -1,6 +1,6 @@
-# TypoMap
+# TypoKit
 
-Collection of common typos and their fixes.
+Collection of common typos and spelling mistakes and their fixes.
 
 
 ## Related

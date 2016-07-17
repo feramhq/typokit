@@ -1,11 +1,11 @@
-const typoMapPromise = require('.')
+const typoKit = require('.')
 const assert = require('assert')
 const values = require('object.values')
 const numberOfWords = 3219
 const numberOfTypos = 4526
 
 {
-  typoMapPromise({type: 'words'})
+  typoKit({type: 'words'})
     .then(words => {
       assert(Array.isArray(words))
       assert.equal(words.length, numberOfWords)
@@ -18,7 +18,7 @@ const numberOfTypos = 4526
 }
 
 {
-  typoMapPromise({type: 'typos'})
+  typoKit({type: 'typos'})
     .then(typos => {
       assert(Array.isArray(typos))
       assert.equal(typos.length, numberOfTypos)
@@ -31,7 +31,7 @@ const numberOfTypos = 4526
 }
 
 {
-  typoMapPromise({type: 'typoToWord'})
+  typoKit({type: 'typoToWord'})
     .then(map => {
       const keys = Object.keys(map)
       assert.equal(keys.length, numberOfTypos)
@@ -41,7 +41,7 @@ const numberOfTypos = 4526
 }
 
 {
-  typoMapPromise({type: 'wordToTypos'})
+  typoKit({type: 'wordToTypos'})
     .then(map => {
       const keys = Object.keys(map)
       assert.equal(keys.length, numberOfWords)
