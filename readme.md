@@ -3,6 +3,14 @@
 Collection of common typos and spelling mistakes and their fixes.
 
 
+## Known Issues
+
+- `buoy: bouy` - Re-add when font-awesome 5 was released.
+- `and: adn` - Brand icon in font-awesome.
+- `sergeant: sargent` - Common surname.
+- `slippery: slippy` - Not wrong, just informal.
+
+
 ## Related
 
 - [Common Typo Detector] - Simple CLI in Node to look for common typos.
