@@ -16,15 +16,21 @@
   "author": "Adrian Sieber",
   "license": "ISC",
   "dependencies": {
-    "eslint": "^2.13.1",
     "fs-promise": "^0.5.0",
-    "javascript-styleguide": "^0.2.2"
+    "js-yaml": "^3.6.1",
+    "object.values": "^1.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/feramhq/typokit"
   },
   "eslintConfig": {
     "root": true,
     "extends": "./node_modules/javascript-styleguide/.eslintrc.yaml"
   },
   "devDependencies": {
-    "husky": "^0.11.5"
+    "eslint": "^3.1.1",
+    "husky": "^0.11.5",
+    "javascript-styleguide": "^0.2.2"
   }
 }
