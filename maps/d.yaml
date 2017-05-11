@@ -259,7 +259,9 @@ divisions: divisons
 doctrines:
   - docrines
   - doctines
-document: doccument
+document: 
+  - dcoument
+  - doccument
 documentary: documenatry
 documented: doccumented
 documents: doccuments
@@ -296,7 +298,6 @@ during:
   - durig
   - durring
   - duting
-
 debugger: debuger
 default:
   - defautl
@@ -310,6 +311,7 @@ direction:
   - directon
 display:
   - dipslay
+  - dispaly
+  - disply
   - dsiplay
   - dsplay
-  - disply
