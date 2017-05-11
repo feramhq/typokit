@@ -21,8 +21,7 @@ decisions: descisions
 decommissioned: decomissioned
 decompose: decomposit
 decomposed: decomposited
-decomposes: decomposits
-decomposing: decompositing
+decomposes: decompositsdecomposing: decompositing
 decrees: decress
 defendant: defendent
 defendants: defendents
@@ -259,7 +258,9 @@ divisions: divisons
 doctrines:
   - docrines
   - doctines
-document: doccument
+document: 
+  - dcoument
+  - doccument
 documentary: documenatry
 documented: doccumented
 documents: doccuments
@@ -310,6 +311,7 @@ direction:
   - directon
 display:
   - dipslay
+  - dispaly
+  - disply
   - dsiplay
   - dsplay
-  - disply
