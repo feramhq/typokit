@@ -21,7 +21,8 @@ decisions: descisions
 decommissioned: decomissioned
 decompose: decomposit
 decomposed: decomposited
-decomposes: decompositsdecomposing: decompositing
+decomposes: decomposits
+decomposing: decompositing
 decrees: decress
 defendant: defendent
 defendants: defendents
@@ -297,7 +298,6 @@ during:
   - durig
   - durring
   - duting
-
 debugger: debuger
 default:
   - defautl
