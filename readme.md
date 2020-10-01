@@ -10,6 +10,7 @@ Collection of common typos and spelling mistakes and their fixes.
 - `and: adn` - Brand icon in font-awesome.
 - `sergeant: sargent` - Common surname.
 - `slippery: slippy` - Not wrong, just informal.
+- ' publically: publicly' - common mistake. 
 
 
 ## Related
