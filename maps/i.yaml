@@ -107,7 +107,9 @@ incompetent:
   - incompetant
   - incomptetent
 incomplete: imcomplete
-inconsistent: inconsistant
+inconsistent:
+  - inconsistant
+  - inconsistet
 incorporated:
   - incoroporated
   - incorportaed
@@ -174,6 +176,7 @@ influential: influencial
 information:
   - infomation
   - informtion
+  - iformation
 infringement: infrigement
 ingenious: ingenius
 ingredients: ingreediants

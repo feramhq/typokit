@@ -1,8 +1,8 @@
 const typoKit = require('.')
 const assert = require('assert')
 const values = require('object.values')
-const numberOfWords = 3219
-const numberOfTypos = 4526
+const numberOfWords = 3230
+const numberOfTypos = 4547
 
 {
   typoKit
