@@ -1,5 +1,4 @@
 # TypoKit
-[![Build Status](https://travis-ci.org/feramhq/typokit.svg?branch=master)](https://travis-ci.org/feramhq/typokit)
 
 Collection of common typos and spelling mistakes and their fixes.
 
